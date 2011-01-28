@@ -33,6 +33,12 @@ set laststatus=2
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
+let mapleader = ","
+
+"easy window switching
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
+
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
