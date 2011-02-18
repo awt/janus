@@ -64,6 +64,9 @@ endif
 " Start without the toolbar
 set guioptions-=T
 
+" Start without the menubar
+set guioptions-=m
+
 " Default gui color scheme
 color ir_black
 
