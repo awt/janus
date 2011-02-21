@@ -128,7 +128,7 @@ set modeline
 set modelines=10
 
 " Default color scheme
-color jellybeans+
+color desert
 
 " Directories for swp files
 set backupdir=~/.vim/backup
@@ -147,3 +147,17 @@ runtime! macros/matchit.vim
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+
+function! JavaScriptFold()
+  setl foldmethod=syntax
+  setl foldlevelstart=1
+  syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
+
+  function! FoldText()
+    return substitute(getline(v:foldstart), '{.*', '{...}', '')
+  endfunction
+    setl foldtext=FoldText()
+endfunction
+au FileType javascript call JavaScriptFold()
+au FileType javascript setl fen

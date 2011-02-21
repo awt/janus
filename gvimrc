@@ -68,7 +68,8 @@ set guioptions-=T
 set guioptions-=m
 
 " Default gui color scheme
-color ir_black
+
+color jellybeans+
 
 " ConqueTerm wrapper
 function StartTerm()
