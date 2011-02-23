@@ -67,6 +67,9 @@ set guioptions-=T
 " Start without the menubar
 set guioptions-=m
 
+" Hide the right scrollbar
+set guioptions-=r
+
 " Default gui color scheme
 
 color jellybeans+
